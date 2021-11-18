@@ -1,11 +1,10 @@
 #ifndef MIDDLE_STR_H_INCLUDED
 #define MIDDLE_STR_H_INCLUDED
 
-#include"middle_str.h"
-
 #include <iostream>
+#include <string>
+
 using namespace std;
-#include <strings.h>
 
 bool itc_isDigit(unsigned char a);
 unsigned char itc_toUpper(unsigned char c);

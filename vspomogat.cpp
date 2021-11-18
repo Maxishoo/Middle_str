@@ -5,6 +5,7 @@ bool isbukva(char c)
     {
        return true;
     }else{return false;}
+    return false;
 }
 long long itc_len(string a)
 {

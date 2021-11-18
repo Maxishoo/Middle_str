@@ -28,4 +28,5 @@ bool itc_isFirstInSecond(string s1, string s2)
     {
         return true;
     }else{return false;}
+    return false;
 }

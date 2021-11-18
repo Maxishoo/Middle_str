@@ -3,7 +3,6 @@ int itc_countWords(string str)
 {
     long long lstr=itc_len(str);
     long start=-1;
-    long endd=-1;
     int k=0;
     for(long long i=0;i<lstr;i++)
     {
