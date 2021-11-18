@@ -15,7 +15,7 @@ string itc_Cezar(string str, int k)
                 k = k % 26;
                 if((str[i]+k)>'z' )
                 {
-                    str[i]='a'+((str[i]+k)-'z');
+                    str[i]='a'+((str[i]+k)-'z')-1;
                 }else
                 {
                     str[i]=str[i]+k;
@@ -41,7 +41,7 @@ string itc_Cezar(string str, int k)
                 k = k % 26;
                 if((str[i]+k)>'Z' )
                 {
-                    str[i]='A'+((str[i]+k)-'Z');
+                    str[i]='A'+((str[i]+k)-'Z')-1;
                 }else
                 {
                     str[i]=str[i]+k;
