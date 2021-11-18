@@ -5,7 +5,7 @@
 
 #include <iostream>
 using namespace std;
-
+#include <strings.h>
 
 bool itc_isDigit(unsigned char a);
 unsigned char itc_toUpper(unsigned char c);

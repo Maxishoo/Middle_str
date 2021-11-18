@@ -1,7 +1,7 @@
 #include "middle_str.h"
 bool isbukva(char c)
 {
-    if(c>64 && c<91 || c>96 && c<123 || c>191 && c<256)
+    if((c>64 && c<91) || (c>96 && c<123) || (c>191 && c<256))
     {
        return true;
     }else{return false;}
@@ -39,7 +39,7 @@ string itc_slice_str(string str,int start, int endd)
 }
 char inttosimb(int a)
 {
-    int ot='-1';
+    char ot=' ';
     if(a==0)
     {
         ot='0';
@@ -90,7 +90,7 @@ char inttosimb(int a)
         ot='F';
     }else
     {
-        return -1;
+        return ' ';
     }
     return ot;
 }

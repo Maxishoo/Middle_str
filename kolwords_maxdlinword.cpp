@@ -13,7 +13,7 @@ int itc_countWords(string str)
             {
                 start=i;
             }else if (start==-1) {
-                if (str[i-1]=' ') start = i;
+                if (str[i-1]==' ') start = i;
             }
 
         }else if(str[i]==' ')
@@ -48,7 +48,7 @@ string itc_maxCharWord(string str)
             {
                 start=i;
             } else if (start==-1) {
-                if(str[i-1]=' ') start = i;
+                if(str[i-1]==' ') start = i;
             }
         }else if(str[i]==' '|| str[i]==',')
         {
