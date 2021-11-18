@@ -109,9 +109,11 @@ string itc_DecToBin(string str)
                 string slice=itc_slice_str( str,start,i-1 );
                 int tint=strtoint( slice );
                 neww+=tostr( itc_covert_num( tint,2) );
-                neww+=str[i];
+                //neww+=str[i];
                 start=-1;
             }
+            neww+=str[i];
+            start = -1;
         }
     }
 

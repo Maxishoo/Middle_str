@@ -1,9 +1,18 @@
 #include "middle_str.h"
 int itc_find_str(string str1,string str2)
 {
+
+    if (str1 == "")
+		return -1;
+	if (str1 != "" && str2 == "")
+		return 0;
+
     long long lstr1=itc_len(str1);
     long long lstr2=itc_len(str2);
     int k=0;
+
+
+
     for(long long i=0;i<lstr1;i++)
     {
 

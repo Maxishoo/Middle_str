@@ -35,6 +35,9 @@ string itc_maxCharWord(string str)
     long endmax=-1;
     long start=-1;
     long endd=-1;
+    if (str == "")
+		return "error";
+
     if(itc_countWords(str)==1)
     {
         return "error";
@@ -49,7 +52,7 @@ string itc_maxCharWord(string str)
             } else if (start==-1) {
                 if(str[i-1]==' ') start = i;
             }
-        }else if(str[i]==' '|| str[i]==',')
+        }else if((str[i]==' ')|| (str[i]==',')|| (str[i]=='!')|| (str[i]=='?'))
         {
             if(start!=-1)
             {

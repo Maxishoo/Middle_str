@@ -1,6 +1,9 @@
 #include "middle_str.h"
 string itc_Cezar(string str, int k)
 {
+    if (str == "")
+		return "";
+
     if (k == 0) return str;
     for(long i=0;i<itc_len(str);i++)
     {
@@ -44,7 +47,7 @@ string itc_Cezar(string str, int k)
                 k=-1*k;
                 if((str[i]-k)<'A' )
                 {
-                    str[i]=123-('A'-(str[i]-k));
+                    str[i]=91-('A'-(str[i]-k));
                 }else
                 {
                     str[i]=str[i]-k;
