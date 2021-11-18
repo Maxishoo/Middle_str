@@ -4,6 +4,7 @@ string itc_Cezar(string str, int k)
     if (str == "")
 		return "";
 
+
     if (k == 0) return str;
     for(long i=0;i<itc_len(str);i++)
     {
@@ -11,6 +12,7 @@ string itc_Cezar(string str, int k)
         {
             if(k>0)
             {
+                k = k % 26;
                 if((str[i]+k)>'z' )
                 {
                     str[i]='a'+((str[i]+k)-'z');
@@ -21,6 +23,7 @@ string itc_Cezar(string str, int k)
             }else if(k<0)
             {
                 k=-1*k;
+                k = k % 26;
                 if((str[i]-k)<'a' )
                 {
                     str[i]=123-('a'-(str[i]-k));
@@ -35,6 +38,7 @@ string itc_Cezar(string str, int k)
         {
             if(k>0)
             {
+                k = k % 26;
                 if((str[i]+k)>'Z' )
                 {
                     str[i]='A'+((str[i]+k)-'Z');
@@ -45,6 +49,7 @@ string itc_Cezar(string str, int k)
             }else if(k<0)
             {
                 k=-1*k;
+                k = k % 26;
                 if((str[i]-k)<'A' )
                 {
                     str[i]=91-('A'-(str[i]-k));

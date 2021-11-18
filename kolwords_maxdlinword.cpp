@@ -35,13 +35,10 @@ string itc_maxCharWord(string str)
     long endmax=-1;
     long start=-1;
     long endd=-1;
+    int kolslov=0;
     if (str == "")
 		return "error";
 
-    if(itc_countWords(str)==1)
-    {
-        return "error";
-    }
     for(long i=0;i<itc_len(str);i++)
     {
         if(isbukva(str[i])==true)
@@ -57,6 +54,7 @@ string itc_maxCharWord(string str)
             if(start!=-1)
             {
             endd = i-1;
+            kolslov++;
             if(endd-start>endmax-startmax)
             {
                 startmax=start;
@@ -74,11 +72,21 @@ string itc_maxCharWord(string str)
     if (start != -1) {
      endd = itc_len(str)-1;
 
+     kolslov++;
      if(endd-start>endmax-startmax)
             {
+
                 startmax=start;
                 endmax=endd;
             }
     }
-    return itc_slice_str(str,startmax,endmax);
+
+    if(kolslov==0)
+    {
+        return "error";
+    }
+
+    string tmp = itc_slice_str(str,startmax,endmax);
+
+    return tmp;
 }

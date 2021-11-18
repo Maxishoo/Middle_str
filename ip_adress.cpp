@@ -57,6 +57,7 @@ bool itc_isIp(string str)
 
     bool otv=true;
     long start=-1;
+    int kolc=0;
     if(str[0]=='.' || str[itc_len(str)-1]=='.')
     {
         return false;
@@ -81,6 +82,7 @@ bool itc_isIp(string str)
                 return otv;
             }
             start=-1;
+            kolc++;
         }else
         {
             otv=false;
@@ -89,12 +91,15 @@ bool itc_isIp(string str)
     }
 
     if (start!=-1) {
+            kolc++;
        if( strtoint(itc_slice_str(str,start,itc_len(str)-1))>255)
             {
                 otv=false;
                 return otv;
             }
     }
+
+    if (kolc!=4) return false;
 
     return otv;
 }
